@@ -3,7 +3,6 @@ const usuarioModel = require("../models/produtoModel");
 // Responsável por renderizar a página de estoque
 async function renderizarPaginaEstoque(request, response) {
    const estoques = await usuarioModel.listandoEstoque();
-    console.log(estoques);
   response.render("estoque", {estoques});
 }
 

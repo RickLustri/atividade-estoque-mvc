@@ -50,11 +50,11 @@ app.get("/criar-conta", cadastroController.exibirPaginaCadastro);
 app.post("/criar-conta", cadastroController.criarConta);
 
 // Rota para a página de estoque
-app.get("/estoque",autenticar.protegerRota, estoqueController.renderizarPaginaEstoque);
+app.get("/estoque", autenticar.protegerRota, estoqueController.renderizarPaginaEstoque);
 
 
 // Rota para a página de criar produto
-app.get("/criar-produto",autenticar.protegerRota, estoqueController.renderizarPaginaProduto);
+app.get("/criar-produto", autenticar.protegerRota, estoqueController.renderizarPaginaProduto);
 app.post("/criar-estoque", estoqueController.criarEstoque);
 
 

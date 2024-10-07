@@ -5,6 +5,9 @@ var session = require("express-session");
 
 var enableHotReload = require("./hot-reload");
 
+// Configuração do dotenv
+require('dotenv').config();
+
 // Importando os controllers
 var loginController = require("./controllers/loginController");
 var cadastroController = require("./controllers/cadastroController");
@@ -59,7 +62,7 @@ app.post("/criar-estoque", estoqueController.criarEstoque);
 
 
 // Inicie o servidor
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 app.listen(port, () => {
   console.log(`Servidor rodando em http://localhost:${port}`);
